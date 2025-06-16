@@ -71,3 +71,20 @@ code {
   padding: 14px;
   border-radius: 5px;
 }
+
+.input-box {
+  padding: 10px;
+  width: 93%;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box:focus {
+  border: 2px solid #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
