@@ -1,9 +1,4 @@
-
----
-
-### ✅ Final `README.md` (Paste this full content):
-
-```md
+md
 # 🛒 Redux Cart App
 
 This is a simple React-Redux based Cart Application with state persistence using Redux Toolkit and Redux Persist. Users can view a list of products and add them to the cart. The cart retains its state even after a page refresh.
@@ -18,8 +13,6 @@ This is a simple React-Redux based Cart Application with state persistence using
 ---
 
 ## 🗂 Project Structure
-
-```
 
 ├── public/
 │   ├── product-page.png
@@ -38,8 +31,6 @@ This is a simple React-Redux based Cart Application with state persistence using
 │   ├── App.js
 │   └── index.js
 
-````
-
 ---
 
 ## 🖼️ Screenshots
@@ -54,12 +45,12 @@ This is a simple React-Redux based Cart Application with state persistence using
 
 ## 🔧 Technologies Used
 
-- **React.js** – Frontend library
-- **Redux Toolkit** – Modern Redux setup for state management
-- **React Redux** – Connects Redux store to React components
-- **Redux Persist** – Persists cart state in localStorage
-- **React Router DOM** – For client-side routing
-- **FakeStore API** – Dummy data API for products
+- React.js – Frontend library
+- Redux Toolkit – Modern Redux setup for state management
+- React Redux – Connects Redux store to React components
+- Redux Persist – Persists cart state in localStorage
+- React Router DOM – For client-side routing
+- FakeStore API – Dummy data API for products
 
 ---
 
@@ -112,10 +103,10 @@ Developed by **Vimal Kumar Chaudhary**
 - Make sure `product-page.png` and `cartpage.png` are placed in the `/public` folder ✅
 - After pasting this in your `README.md`, run:
 
-```bash
+bash
 git add README.md
 git commit -m "Updated README with full project details"
 git push
-````
+
 
 
