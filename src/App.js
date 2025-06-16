@@ -4,23 +4,22 @@ import { Provider } from 'react-redux';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Navbar from './component/Navbar';
-import store from './store/store';
-
-
+import store, { persistor } from './store/store'; // ✅ persistor import
+import { PersistGate } from 'redux-persist/integration/react'; // ✅ PersistGate import
 
 function App() {
   return (
-    <div>
-      <Provider store={store}>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
-          <Navbar/>
+          <Navbar />
           <Routes>
-            <Route exact path='/' element={<Home/>}></Route>
-            <Route path='/cart' element={<Cart/>}></Route>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/cart' element={<Cart />} />
           </Routes>
-      </BrowserRouter>
-      </Provider>
-    </div>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   );
 }
 
