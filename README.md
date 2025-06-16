@@ -13,6 +13,7 @@ This is a simple React-Redux based Cart Application with state persistence using
 ---
 
 ## 🗂 Project Structure
+```
 
 ├── public/
 │   ├── product-page.png
@@ -31,6 +32,7 @@ This is a simple React-Redux based Cart Application with state persistence using
 │   ├── App.js
 │   └── index.js
 
+```
 ---
 
 ## 🖼️ Screenshots
