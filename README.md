@@ -97,16 +97,7 @@ Developed by **Vimal Kumar Chaudhary**
 
 ````
 
----
 
-### 📌 Important Notes:
-- Make sure `product-page.png` and `cartpage.png` are placed in the `/public` folder ✅
-- After pasting this in your `README.md`, run:
-
-bash
-git add README.md
-git commit -m "Updated README with full project details"
-git push
 
 
 
