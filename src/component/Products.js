@@ -117,7 +117,7 @@ const Products = () => {
 
         return (
           <div className="card" key={product.id}>
-            <img src={product.image} alt="" style={{ height: '11rem' }} />
+            <img src={product.image} alt="" style={{ height: '8rem' }} />
             <p style={{ color: '#5e6155' }}>{product.title}</p>
             <h5>₹{product.price}</h5>
             <button
