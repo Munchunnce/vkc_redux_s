@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { remove } from "../store/cartSlice";
+import { remove, clear } from "../store/cartSlice";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -21,6 +21,7 @@ const Cart = () => {
 
     setOrderSuccess(true);
     setAddress("");
+    dispatch(clear()); // Cart empty kar diya
 
     // Hide success message after 5 seconds
     setTimeout(() => {
@@ -35,9 +36,9 @@ const Cart = () => {
       <h3>Cart</h3>
 
       {products.length === 0 ? (
-        <p style={{ fontSize: "18px", color: "#777", marginTop: "20px" }}>
-          Your cart is empty 🛒
-        </p>
+        <>
+          <img className="empty-cart-img" src="/empty-cart.png" alt="empty cart" />
+        </>
       ) : (
         <>
           <div className="cartWrapper">

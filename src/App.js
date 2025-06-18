@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Navbar from './component/Navbar';
-import store, { persistor } from './store/store'; // ✅ persistor import
-import { PersistGate } from 'redux-persist/integration/react'; // ✅ PersistGate import
+import store, { persistor } from './store/store'; // persistor import
+import { PersistGate } from 'redux-persist/integration/react'; // PersistGate import
 
 function App() {
   return (

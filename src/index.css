@@ -17,19 +17,83 @@ code {
     monospace;
 }
 
-.card{
+.card {
+  position: relative;
   background: white;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
-
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.6s ease forwards;
 }
 
-.productsWrapper{
+/* Smooth slide + fade on load */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover zoom effect */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+
+.productsWrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  padding: 20px;
 }
+
+.product-title {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+/* Tooltip via ::after pseudo-element */
+.product-title::after {
+  content: attr(data-fulltitle);
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  white-space: normal;
+  background-color: #fff;
+  padding: 6px 12px;
+  color: #000;
+  font-size: 13px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  width: max-content;
+  max-width: 300px;
+}
+
+/* Show tooltip on hover */
+.product-title:hover::after {
+  opacity: 1;
+}
+
 
 .btn{
   border: none;
@@ -87,4 +151,33 @@ code {
   border: 2px solid #4CAF50;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
+
+.empty-cart-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+
+  /* ✨ Animation */
+  animation: fadeZoomIn 0.8s ease-in-out;
+}
+
+/* 🔥 Keyframes for smooth zoom + fade */
+@keyframes fadeZoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+}
+
+
 
