@@ -58,7 +58,7 @@ const Products = () => {
 
         return (
           <div className="card" key={product.id}>
-            <img src={product.image} alt="" style={{ height: '11rem' }} />
+            <img src={product.image} alt="" style={{ height: '8rem' }} />
             <div className="title-wrapper">
               <p className="product-title" data-fulltitle={product.title}>
                 {product.title}

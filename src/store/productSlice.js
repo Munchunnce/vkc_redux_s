@@ -45,9 +45,9 @@ export default productSlice.reducer;
 
 // Thunk
 export const fetchProducts = createAsyncThunk('products/fetch', async () => {
-    const res = await fetch('https://fakestoreapi.in/api/products');
+    const res = await fetch('https://fakestoreapi.com/products');
     const data = await res.json();
-    return data.products;
+    return data;
 })
 
 // export function fetchProducts() {
