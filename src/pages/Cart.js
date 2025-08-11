@@ -17,7 +17,7 @@ const Cart = () => {
     if (address.trim() === "") {
       alert("Please enter your address before placing the order.");
       return;
-    }
+    };
 
     setOrderSuccess(true);
     setAddress("");
