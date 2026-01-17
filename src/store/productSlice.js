@@ -50,6 +50,7 @@ export const fetchProducts = createAsyncThunk('products/fetch', async () => {
     return data;
 })
 
+
 // export function fetchProducts() {
 //     return async function fetchProductThunk(dispatch, getState) {
 //         dispatch(setStatus(STATUSES.LOADING));
