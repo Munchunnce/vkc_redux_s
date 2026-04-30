@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from './cartSlice';
 import productReducer from './productSlice';
 
-// Redux Persist Imports 👇
+// Redux Persist Imports
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage
 
@@ -24,7 +24,7 @@ const persistConfig = {
 // Persisted reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// ✅ Fix: Configure Store with middleware override
+// fix: Configure Store with middleware override
 const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
