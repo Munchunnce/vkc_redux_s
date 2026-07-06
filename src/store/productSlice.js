@@ -6,6 +6,7 @@ export const STATUSES = Object.freeze({
     LOADING: 'loading',
 });
 
+
 const productSlice = createSlice({
     name: 'product',
     initialState: {
