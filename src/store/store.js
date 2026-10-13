@@ -14,7 +14,6 @@ const rootReducer = combineReducers({
   product: productReducer,
 });
 
-
 // Persist config
 const persistConfig = {
   key: "root",
