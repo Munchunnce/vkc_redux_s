@@ -22,6 +22,7 @@ const Products = () => {
         // fetchProducts();
   }, []);
 
+  
   const handleAdd = (product) => {
     dispatch(add(product));
     setAddedProductIds((prev) => [...prev, product.id]);
