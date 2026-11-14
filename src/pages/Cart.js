@@ -13,6 +13,7 @@ const Cart = () => {
   const handleRemove = (productId) => {
     dispatch(remove(productId));
   };
+  
 
   const handleOrder = () => {
     if (address.trim() === "") {
